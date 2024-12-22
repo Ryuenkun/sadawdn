@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Grau</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="spots">
+        <h1>Three of your pictures that I really like</h1>
+        <div class="spots-container">
+            <div class="spot" onclick="openModal('kupal', 'Ganda ng ngiti mo dito kupal.')">
+                <img src="pic6.jpg" alt="Maria">
+                <h3></h3>
+                <p>Click picture to view description</p>
+            </div>
+            <div class="spot" onclick="openModal('kupal', 'Ganda mo!!.')">
+                <img src="pic5.jpg" alt="Maria">
+                <h3></h3>
+                <p>Click picture to view description</p>
+            </div>
+            <div class="spot" onclick="openModal('kupal', 'cutie mo dito truepahh')">
+                <img src="pic3.jpg" alt="Maria">
+                <h3></h3>
+                <p>Click picture to view description</p>
+            </div>
+
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function openModal(title, description) {
+            document.getElementById('modal').style.display = 'block';
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-description').innerText = description;
+            document.body.style.overflow = 'hidden'; // Disable page scroll
+        }
+    
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+            document.body.style.overflow = ''; // Re-enable page scroll
+        }
+    </script>
+
+    <footer>
+        <p>We appreciate your interest in our website. To view this girl's Facebook page, click Continue.</p>
+        <a href="https://www.facebook.com/gau.tsuu" class="btn">Continue</a>        
+    </footer>
+</body>
+</html>
